@@ -33,7 +33,6 @@
             line-height: 1.6;
         }
 
-        /* Banner Promocional Cotidiano */
         .top-banner {
             background: var(--gold-gradient);
             color: #000;
@@ -106,10 +105,11 @@
             margin: 8px auto 0;
         }
 
-        /* Panel Admin */
+        /* Panel Admin Oculto por defecto */
         .admin-panel {
+            display: none;
             background-color: var(--bg-card);
-            border: 1px solid rgba(212, 175, 55, 0.3);
+            border: 2px dashed var(--gold-primary);
             border-radius: 12px;
             padding: 1.5rem;
             margin-bottom: 3rem;
@@ -242,6 +242,7 @@
         }
 
         .btn-delete {
+            display: none; /* Oculto para clientes */
             position: absolute;
             top: 10px;
             right: 10px;
@@ -253,10 +254,13 @@
             border-radius: 50%;
             cursor: pointer;
             font-size: 1rem;
-            display: flex;
             align-items: center;
             justify-content: center;
             z-index: 5;
+        }
+
+        .show-admin .btn-delete {
+            display: flex;
         }
 
         /* Sección de Pagos y Ubicación */
@@ -399,6 +403,7 @@
             color: var(--text-muted);
             border-top: 1px solid #222;
             margin-top: 3rem;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -416,9 +421,9 @@
     </header>
 
     <div class="container">
-        <!-- Panel de Administración -->
-        <section class="admin-panel">
-            <h3><i class="fa-solid fa-plus-circle"></i> Agregar Nuevo Producto</h3>
+        <!-- Panel de Administración Oculto -->
+        <section class="admin-panel" id="adminPanel">
+            <h3><i class="fa-solid fa-user-shield"></i> Modo Administrador - Agregar Producto</h3>
             <form id="productForm">
                 <div class="form-grid">
                     <div class="form-group">
@@ -501,7 +506,7 @@
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
-    <footer>
+    <footer id="footerText">
         <p>&copy; 2026 Antojo Secreto - Universo de Detalles. Todos los derechos reservados.</p>
     </footer>
 
@@ -588,6 +593,36 @@
                 renderProducts();
             }
         }
+
+        // Modo Administrador con Atajo de Teclado o Clics
+        const adminPanel = document.getElementById('adminPanel');
+        
+        function toggleAdminMode() {
+            if (adminPanel.style.display === 'block') {
+                adminPanel.style.display = 'none';
+                document.body.classList.remove('show-admin');
+            } else {
+                adminPanel.style.display = 'block';
+                document.body.classList.add('show-admin');
+            }
+        }
+
+        // Atajo teclado: Ctrl + Shift + A
+        document.addEventListener('keydown', (e) => {
+            if (e.ctrlKey && e.shiftKey && e.key === 'A') {
+                toggleAdminMode();
+            }
+        });
+
+        // O opción alternativa: 3 clics seguidos en el texto de abajo (pie de página)
+        let clickCount = 0;
+        document.getElementById('footerText').addEventListener('click', () => {
+            clickCount++;
+            if (clickCount === 3) {
+                toggleAdminMode();
+                clickCount = 0;
+            }
+        });
 
         renderProducts();
     </script>
