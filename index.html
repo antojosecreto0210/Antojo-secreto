@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antojo Secreto - Universo de Detalles</title>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-main: #0b0b0b;
+            --bg-card: #161616;
+            --gold-primary: #d4af37;
+            --gold-gradient: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728, #fbf5b7);
+            --pink-accent: #d6249f;
+            --text-light: #f5f5f5;
+            --text-muted: #a0a0a0;
+            --whatsapp-green: #25d366;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-main);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* Banner Promocional Cotidiano */
+        .top-banner {
+            background: var(--gold-gradient);
+            color: #000;
+            text-align: center;
+            padding: 0.5rem 1rem;
+            font-weight: 600;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+        }
+
+        header {
+            background: linear-gradient(to bottom, rgba(0,0,0,0.95), rgba(11,11,11,1));
+            padding: 2.5rem 1rem 1.5rem;
+            text-align: center;
+            border-bottom: 2px solid var(--gold-primary);
+        }
+
+        .logo-img {
+            max-width: 170px;
+            height: auto;
+            margin-bottom: 0.5rem;
+            filter: drop-shadow(0 0 12px rgba(212, 175, 55, 0.4));
+        }
+
+        .brand-title {
+            font-family: 'Cinzel', serif;
+            font-size: 2.3rem;
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 2px;
+        }
+
+        .brand-subtitle {
+            font-size: 0.85rem;
+            letter-spacing: 4px;
+            color: var(--gold-primary);
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+
+        .hero-phrase {
+            font-style: italic;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-top: 0.5rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        .section-title {
+            font-family: 'Cinzel', serif;
+            text-align: center;
+            font-size: 1.8rem;
+            color: var(--gold-primary);
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 2px;
+            background: var(--gold-primary);
+            margin: 8px auto 0;
+        }
+
+        /* Panel Admin */
+        .admin-panel {
+            background-color: var(--bg-card);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .admin-panel h3 {
+            color: var(--gold-primary);
+            margin-bottom: 1rem;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 0.8rem;
+            background: #222;
+            border: 1px solid #444;
+            border-radius: 6px;
+            color: #fff;
+            outline: none;
+        }
+
+        .form-group input:focus {
+            border-color: var(--gold-primary);
+        }
+
+        .btn-add {
+            background: var(--gold-gradient);
+            color: #000;
+            font-weight: bold;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 1rem;
+        }
+
+        .btn-add:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+
+        /* Grilla de Productos */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .product-card {
+            background-color: var(--bg-card);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #282828;
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .product-card:hover {
+            border-color: var(--gold-primary);
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.15);
+        }
+
+        .product-img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            background-color: #222;
+        }
+
+        .product-info {
+            padding: 1.2rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .product-title {
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin-bottom: 0.4rem;
+            color: #fff;
+        }
+
+        .product-desc {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 0.8rem;
+            flex-grow: 1;
+        }
+
+        .product-price {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--gold-primary);
+            margin-bottom: 0.4rem;
+        }
+
+        .product-stock {
+            font-size: 0.8rem;
+            color: #888;
+            margin-bottom: 1rem;
+        }
+
+        .btn-buy {
+            background-color: var(--whatsapp-green);
+            color: #fff;
+            text-decoration: none;
+            text-align: center;
+            padding: 0.75rem;
+            border-radius: 6px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: 0.2s;
+        }
+
+        .btn-buy:hover {
+            background-color: #1eb956;
+        }
+
+        .btn-delete {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(230, 0, 0, 0.8);
+            color: white;
+            border: none;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 5;
+        }
+
+        /* Sección de Pagos y Ubicación */
+        .info-grid-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .info-box {
+            background-color: var(--bg-card);
+            border: 1px solid #282828;
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .info-box i {
+            font-size: 2.5rem;
+            color: var(--gold-primary);
+            margin-bottom: 1rem;
+        }
+
+        .info-box h3 {
+            color: #fff;
+            margin-bottom: 1rem;
+            font-family: 'Cinzel', serif;
+        }
+
+        .payment-methods {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .payment-tag {
+            background: #222;
+            border: 1px solid var(--gold-primary);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: #fff;
+        }
+
+        /* Sección Social y QR */
+        .social-section {
+            margin-top: 3rem;
+            background-color: var(--bg-card);
+            padding: 3rem 1.5rem;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid #282828;
+        }
+
+        .contact-info p {
+            margin: 0.4rem 0;
+            font-size: 1rem;
+        }
+
+        .qr-grid {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .qr-card {
+            background: #222;
+            padding: 1.5rem;
+            border-radius: 10px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            max-width: 260px;
+            text-align: center;
+        }
+
+        .qr-card img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .social-link {
+            color: #fff;
+            font-size: 1.5rem;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #222;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: 0.3s;
+            border: 1px solid #333;
+        }
+
+        .social-link:hover {
+            background: var(--pink-accent);
+            transform: scale(1.1);
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background-color: var(--whatsapp-green);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+            z-index: 100;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            border-top: 1px solid #222;
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-banner">
+        ✨ ¡Envíos a todo el país! Regala un detalle especial hoy mismo ✨
+    </div>
+
+    <header>
+        <img src="WhatsApp Image 2026-11-06 at 16.40.26.jpeg" alt="Antojo Secreto Logo" class="logo-img">
+        <h1 class="brand-title">ANTOJO SECRETO</h1>
+        <p class="brand-subtitle">Universo de Detalles</p>
+        <p class="hero-phrase">"Sorprende a quienes más quieres con detalles únicos, hechos con amor."</p>
+    </header>
+
+    <div class="container">
+        <!-- Panel de Administración -->
+        <section class="admin-panel">
+            <h3><i class="fa-solid fa-plus-circle"></i> Agregar Nuevo Producto</h3>
+            <form id="productForm">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <input type="text" id="pTitle" placeholder="Nombre del Producto" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="pPrice" placeholder="Precio (ej: $10.000 c/u)" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="number" id="pStock" placeholder="Cantidad Disponible (Stock)" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="pDesc" placeholder="Descripción corta">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="pImg" placeholder="Nombre de imagen o URL (ej: foto.jpeg)">
+                    </div>
+                </div>
+                <button type="submit" class="btn-add">Guardar Producto</button>
+            </form>
+        </section>
+
+        <!-- Catálogo de Productos -->
+        <section>
+            <h2 class="section-title">Catálogo de Productos</h2>
+            <div class="products-grid" id="productsGrid"></div>
+        </section>
+
+        <!-- Formas de Pago y Ubicación -->
+        <section class="info-grid-section">
+            <div class="info-box">
+                <i class="fa-solid fa-credit-card"></i>
+                <h3>Métodos de Pago</h3>
+                <p>Aceptamos pagos fáciles y rápidos para tu comodidad:</p>
+                <div class="payment-methods">
+                    <span class="payment-tag">Nequi</span>
+                    <span class="payment-tag">Daviplata</span>
+                    <span class="payment-tag">Transferencia Bancaria</span>
+                    <span class="payment-tag">Efectivo contra entrega</span>
+                </div>
+            </div>
+            <div class="info-box">
+                <i class="fa-solid fa-location-dot"></i>
+                <h3>Ubicación y Envíos</h3>
+                <p>📍 <strong>Atención y Cobertura:</strong> Envíos locales y entregas a nivel nacional.</p>
+                <p style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--text-muted);">Haz tu pedido por WhatsApp y coordinamos la entrega en la puerta de tu casa.</p>
+            </div>
+        </section>
+
+        <!-- Redes y Contacto -->
+        <section class="social-section">
+            <h2 class="section-title">Síguenos & Contacto</h2>
+            <div class="contact-info">
+                <p><i class="fa-solid fa-envelope" style="color: var(--gold-primary);"></i> antojosecreto0210@gmail.com</p>
+                <p><i class="fa-solid fa-phone" style="color: var(--gold-primary);"></i> +57 305 294 2120</p>
+            </div>
+
+            <div class="qr-grid">
+                <div class="qr-card">
+                    <img src="WhatsApp Image 2026-11-06 at 16.40.17.jpeg" alt="QR Instagram">
+                    <p><strong>Instagram</strong><br>@ANTOJO_SECRETO01</p>
+                </div>
+                <div class="qr-card">
+                    <img src="WhatsApp Image 2026-11-06 at 16.41.13.jpeg" alt="QR TikTok">
+                    <p><strong>TikTok</strong><br>Antojo Secreto</p>
+                </div>
+            </div>
+
+            <div class="social-links">
+                <a href="https://instagram.com/ANTOJO_SECRETO01" target="_blank" class="social-link" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://tiktok.com/@ANTOJO_SECRETO01" target="_blank" class="social-link" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="mailto:antojosecreto0210@gmail.com" class="social-link" title="Correo"><i class="fa-regular fa-envelope"></i></a>
+                <a href="https://wa.me/573052942120" target="_blank" class="social-link" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </section>
+    </div>
+
+    <!-- Botón WhatsApp Flotante Corporativo -->
+    <a href="https://wa.me/573052942120?text=Hola,%20quiero%20hacer%20un%20pedido%20en%20Antojo%20Secreto" class="whatsapp-float" target="_blank" title="Chatea con nosotros">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <footer>
+        <p>&copy; 2026 Antojo Secreto - Universo de Detalles. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        const defaultProducts = [
+            { id: 1, title: 'Kit Skincare Spa', price: '$22.000', stock: 15, desc: 'Balaca suavecita + 2 muñequeras + esponjita + pinza.', img: 'WhatsApp Image 2026-11-06 at 16.38.22.jpeg' },
+            { id: 2, title: 'Kit Beauty Ruby Face', price: '$20.000', stock: 12, desc: 'Diadema spa suave + rodillo masajear facial metálico.', img: 'WhatsApp Image 2026-11-06 at 16.38.22 (1).jpeg' },
+            { id: 3, title: 'Esponjitas Kawaii con Soporte', price: '$4.000 c/u', stock: 35, desc: 'No absorbe producto, con base soporte, forma gota.', img: 'WhatsApp Image 2026-11-06 at 16.38.23.jpeg' },
+            { id: 4, title: 'Bálsamo Labial Frutal Admid', price: '$3.000 c/u', stock: 40, desc: 'Hidrata labios secos, brillo natural, aroma frutal.', img: 'WhatsApp Image 2026-11-06 at 16.38.23 (1).jpeg' },
+            { id: 5, title: 'Mini Blocks Halloween Armables', price: '$8.000 c/u', stock: 20, desc: 'Juguete tipo lego coleccionable, 3 modelos.', img: 'WhatsApp Image 2026-11-06 at 16.38.24.jpeg' },
+            { id: 6, title: 'Squeeze Desestresantes', price: 'Desde $2.000', stock: 50, desc: 'Suavecitas, estira y aprieta, anti-estrés.', img: 'WhatsApp Image 2026-11-06 at 16.38.24 (1).jpeg' },
+            { id: 7, title: 'Libros para Colorear Anti-estrés', price: '$10.000 c/u', stock: 15, desc: 'Line Art y Open at Your Own Risk.', img: 'WhatsApp Image 2026-11-06 at 16.38.24 (2).jpeg' },
+            { id: 8, title: 'Limas de Uñas Kawaii Pack x 3', price: '$3.000 el pack', stock: 30, desc: 'León, jirafa, koala, súper tiernos.', img: 'WhatsApp Image 2026-11-06 at 16.38.24 (3).jpeg' },
+            { id: 9, title: 'Máscaras Faciales Hidrogel Sadoer', price: '$8.000 c/u', stock: 20, desc: 'Rose y 24K Golden colágeno.', img: 'WhatsApp Image 2026-11-06 at 16.38.27 (2).jpeg' },
+            { id: 10, title: 'Rutina Skincare (Parches)', price: '$2.500 c/u', stock: 30, desc: 'Ojos y labios nutritivos.', img: 'WhatsApp Image 2026-11-06 at 16.38.27 (1).jpeg' },
+            { id: 11, title: 'Bolsa de Agua Caliente Grande', price: '$38.000', stock: 12, desc: 'Alivia cólicos y dolores musculares.', img: 'WhatsApp Image 2026-11-06 at 16.38.26.jpeg' },
+            { id: 12, title: 'Bolsa de Agua Caliente Mini', price: '$25.000', stock: 15, desc: 'Práctica, suavecita y recargable.', img: 'WhatsApp Image 2026-11-06 at 16.38.27.jpeg' },
+            { id: 13, title: 'Ventilador Portátil 199 Velocidades', price: '$35.000', stock: 10, desc: 'Batería larga duración, plegable.', img: 'WhatsApp Image 2026-11-06 at 16.38.26 (1).jpeg' },
+            { id: 14, title: 'Llavero Casco Mini KMD', price: '$10.000', stock: 25, desc: 'Visor tornasol, ideal para bikers.', img: 'WhatsApp Image 2026-11-06 at 16.38.25 (2).jpeg' },
+            { id: 15, title: 'Limas de Uñas Kawaii', price: '$4.000 c/u', stock: 40, desc: 'Grano 100/180 diseño colorido.', img: 'WhatsApp Image 2026-11-06 at 16.38.25 (1).jpeg' },
+            { id: 16, title: 'Llaveros Tiernos 3D Stitch', price: '$13.000 c/u', stock: 20, desc: 'Con correa para llaves o bolso.', img: 'WhatsApp Image 2026-11-06 at 16.38.25.jpeg' },
+            { id: 17, title: 'Set Anillos Góticos (17 Unidades)', price: '$4.500 c/u', stock: 20, desc: 'Edición Dark, ajustables.', img: 'WhatsApp Image 2026-11-06 at 16.38.29.jpeg' },
+            { id: 18, title: 'Set Aretes Góticos Dark (6 Pares)', price: '$4.500 c/u', stock: 15, desc: 'Hipoalergénicos, baño plata.', img: 'WhatsApp Image 2026-11-06 at 16.38.28.jpeg' },
+            { id: 19, title: 'Set Aretes Góticos Halloween', price: '$4.500 c/u', stock: 15, desc: 'Acrílico premium, edición especial.', img: 'WhatsApp Image 2026-11-06 at 16.38.28 (1).jpeg' },
+            { id: 20, title: 'Intercomunicador Casco Q58-Max', price: '$50.000', stock: 10, desc: 'Bluetooth, radio FM, waterproof.', img: 'WhatsApp Image 2026-11-06 at 16.38.29 (1).jpeg' },
+            { id: 21, title: 'Vino Artesanal • Abocado', price: '$16.000 c/u', stock: 15, desc: '100% artesanal, dulce y suave.', img: 'WhatsApp Image 2026-11-06 at 16.38.30 (1).jpeg' },
+            { id: 22, title: 'Cremas de Whisky Artesanal', price: '$16.000 c/u', stock: 20, desc: 'Maracuyá, Uva, Coco, Café.', img: 'WhatsApp Image 2026-11-06 at 16.38.30.jpeg' },
+            { id: 23, title: 'Medias con Estilo (Dark)', price: '$8.000 c/u', stock: 25, desc: 'Diseños únicos de calaveras y fuego.', img: 'WhatsApp Image 2026-11-06 at 16.38.30 (2).jpeg' },
+            { id: 24, title: 'Medias Tiernas Cow & Bear', price: '$8.000 c/u', stock: 20, desc: 'Vaquitas y ositos.', img: 'WhatsApp Image 2026-11-06 at 16.38.57.jpeg' },
+            { id: 25, title: 'Espejitos Llavero con Brillo', price: '$15.000 c/u', stock: 18, desc: 'Doble espejo con purpurina.', img: 'WhatsApp Image 2026-11-06 at 16.38.29 (3).jpeg' },
+            { id: 26, title: 'Antifaz Peluchudo con Gel', price: '$10.000', stock: 12, desc: 'Térmico reutilizable frío/caliente.', img: 'WhatsApp Image 2026-11-06 at 16.38.29 (4).jpeg' },
+            { id: 27, title: 'Tarritos de Moñitas', price: '$5.000 c/u', stock: 30, desc: 'Cauchos y ganchitos surtidos.', img: 'WhatsApp Image 2026-11-06 at 16.38.29 (2).jpeg' }
+        ];
+
+        let products = JSON.parse(localStorage.getItem('antojo_products'));
+        if (!products || products.length === 0) {
+            products = defaultProducts;
+        }
+
+        const productsGrid = document.getElementById('productsGrid');
+        const productForm = document.getElementById('productForm');
+
+        function renderProducts() {
+            productsGrid.innerHTML = '';
+            products.forEach((prod, index) => {
+                const card = document.createElement('div');
+                card.className = 'product-card';
+                card.innerHTML = `
+                    <button class="btn-delete" onclick="deleteProduct(${index})" title="Eliminar producto">&times;</button>
+                    <img src="${prod.img || 'https://via.placeholder.com/300x220?text=Antojo+Secreto'}" class="product-img" alt="${prod.title}" onerror="this.src='https://via.placeholder.com/300x220?text=Antojo+Secreto'">
+                    <div class="product-info">
+                        <h3 class="product-title">${prod.title}</h3>
+                        <p class="product-desc">${prod.desc || ''}</p>
+                        <div class="product-price">${prod.price}</div>
+                        <div class="product-stock">Disponible: ${prod.stock} unidades</div>
+                        <a href="https://wa.me/573052942120?text=Hola!%20Me%20interesa%20comprar:%20${encodeURIComponent(prod.title)}" target="_blank" class="btn-buy">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                `;
+                productsGrid.appendChild(card);
+            });
+            localStorage.setItem('antojo_products', JSON.stringify(products));
+        }
+
+        productForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const newProd = {
+                id: Date.now(),
+                title: document.getElementById('pTitle').value,
+                price: document.getElementById('pPrice').value,
+                stock: document.getElementById('pStock').value,
+                desc: document.getElementById('pDesc').value,
+                img: document.getElementById('pImg').value
+            };
+            products.push(newProd);
+            renderProducts();
+            productForm.reset();
+        });
+
+        function deleteProduct(index) {
+            if (confirm('¿Estás seguro de eliminar este producto?')) {
+                products.splice(index, 1);
+                renderProducts();
+            }
+        }
+
+        renderProducts();
+    </script>
+</body>
+</html>
