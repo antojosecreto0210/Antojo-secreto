@@ -105,7 +105,7 @@
             margin: 8px auto 0;
         }
 
-        /* Panel Admin Oculto por defecto */
+        /* Panel Admin Oculto */
         .admin-panel {
             display: none;
             background-color: var(--bg-card);
@@ -242,7 +242,7 @@
         }
 
         .btn-delete {
-            display: none; /* Oculto para clientes */
+            display: none;
             position: absolute;
             top: 10px;
             right: 10px;
@@ -263,12 +263,36 @@
             display: flex;
         }
 
+        /* Sección Sobre Nosotros */
+        .about-section {
+            margin-top: 4rem;
+            background: linear-gradient(145deg, #181818, #111111);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 12px;
+            padding: 2.5rem 1.5rem;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1rem;
+            color: #d1d1d1;
+            line-height: 1.8;
+        }
+
+        .about-highlight {
+            color: var(--gold-primary);
+            font-weight: 600;
+        }
+
         /* Sección de Pagos y Ubicación */
         .info-grid-section {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
-            margin-top: 4rem;
+            margin-top: 3rem;
         }
 
         .info-box {
@@ -452,6 +476,15 @@
             <div class="products-grid" id="productsGrid"></div>
         </section>
 
+        <!-- Sección Sobre Nosotros -->
+        <section class="about-section">
+            <h2 class="section-title">Sobre Nosotros</h2>
+            <div class="about-content">
+                <p>En <span class="about-highlight">Antojo Secreto - Universo de Detalles</span> nos apasiona ser cómplices de tus momentos más especiales. Seleccionamos y preparamos cada producto con el corazón para que sorprender a tus seres queridos sea una experiencia inolvidable, llena de magia y significado. ✨</p>
+                <p style="margin-top: 1rem; font-style: italic; font-size: 0.95rem; color: var(--gold-primary);">¡Gracias por apoyar el talento y emprendimiento local!</p>
+            </div>
+        </section>
+
         <!-- Formas de Pago y Ubicación -->
         <section class="info-grid-section">
             <div class="info-box">
@@ -594,7 +627,6 @@
             }
         }
 
-        // Modo Administrador con Atajo de Teclado o Clics
         const adminPanel = document.getElementById('adminPanel');
         
         function toggleAdminMode() {
@@ -607,14 +639,12 @@
             }
         }
 
-        // Atajo teclado: Ctrl + Shift + A
         document.addEventListener('keydown', (e) => {
             if (e.ctrlKey && e.shiftKey && e.key === 'A') {
                 toggleAdminMode();
             }
         });
 
-        // O opción alternativa: 3 clics seguidos en el texto de abajo (pie de página)
         let clickCount = 0;
         document.getElementById('footerText').addEventListener('click', () => {
             clickCount++;
