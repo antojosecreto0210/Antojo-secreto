@@ -1,0 +1,222 @@
+[
+  {
+    "id": "medias-tiernas",
+    "name": "Medias con estilo – diseños tiernos",
+    "price": null,
+    "category": "Estilo & Encanto",
+    "page": 2,
+    "description": "Medias cómodas con diseños tiernos. Precio pendiente de confirmar."
+  },
+  {
+    "id": "medias-dark",
+    "name": "Medias con estilo – edición dark",
+    "price": 8000,
+    "promo": "2 x $15.000",
+    "category": "Estilo & Encanto",
+    "page": 3,
+    "description": "Diseños únicos y cómodos para darle personalidad a tu look."
+  },
+  {
+    "id": "vino-arandano",
+    "name": "Vino artesanal de arándano",
+    "price": 16000,
+    "category": "Brindis con Estilo",
+    "page": 4,
+    "description": "Vino artesanal, dulce y suave."
+  },
+  {
+    "id": "cremas-whisky",
+    "name": "Cremas de whisky artesanales",
+    "price": 16000,
+    "category": "Brindis con Estilo",
+    "page": 5,
+    "description": "Variedades: maracuyá, uva, coco y café."
+  },
+  {
+    "id": "antifaz-gel",
+    "name": "Antifaz de gel térmico",
+    "price": 10000,
+    "category": "Ritual de Belleza",
+    "page": 6,
+    "description": "Antifaz afelpado con gel; puede utilizarse frío o caliente."
+  },
+  {
+    "id": "espejo-llavero",
+    "name": "Espejitos llavero con brillo",
+    "price": 15000,
+    "category": "Estilo & Encanto",
+    "page": 7,
+    "description": "Doble espejo y llavero con shaker de purpurina."
+  },
+  {
+    "id": "tarrito-monitas",
+    "name": "Tarritos de moñitas",
+    "price": 5000,
+    "category": "Ritual de Belleza",
+    "page": 8,
+    "description": "Incluye cauchos y ganchitos en un práctico tarrito. Colores surtidos."
+  },
+  {
+    "id": "intercom-casco",
+    "name": "Intercomunicador para casco Q58-MAX",
+    "price": 50000,
+    "category": "Estilo & Encanto",
+    "page": 9,
+    "description": "Intercomunicador para moto con música, radio FM y llamadas."
+  },
+  {
+    "id": "anillos-goticos",
+    "name": "Set de anillos góticos – edición dark",
+    "price": 4500,
+    "category": "Estilo & Encanto",
+    "page": 10,
+    "description": "Set de 17 unidades con diseños de tendencia."
+  },
+  {
+    "id": "aretes-goticos",
+    "name": "Set de aretes góticos – edición dark",
+    "price": 4500,
+    "category": "Estilo & Encanto",
+    "page": 11,
+    "description": "Set de 6 pares con diseños góticos."
+  },
+  {
+    "id": "mascaras-faciales",
+    "name": "Mascarillas faciales de colágeno",
+    "price": 8000,
+    "category": "Ritual de Belleza",
+    "page": 12,
+    "description": "Opciones Rose y 24K Golden."
+  },
+  {
+    "id": "sobres-skincare",
+    "name": "Tratamientos faciales en sobres",
+    "price": 2500,
+    "promo": "2 x $4.000",
+    "category": "Ritual de Belleza",
+    "page": 13,
+    "description": "Opciones para labios, ojos y rostro; consulta las variedades disponibles."
+  },
+  {
+    "id": "bolsa-mini",
+    "name": "Bolsa de agua caliente afelpada mini",
+    "price": 25000,
+    "category": "Ritual de Belleza",
+    "page": 14,
+    "description": "Suave, lavable y recargable con agua caliente."
+  },
+  {
+    "id": "ventilador",
+    "name": "Ventilador de mano portátil – 199 velocidades",
+    "price": 35000,
+    "category": "Estilo & Encanto",
+    "page": 15,
+    "description": "Ventilador portátil y recargable."
+  },
+  {
+    "id": "bolsa-afelpada",
+    "name": "Bolsa de agua caliente afelpada",
+    "price": 38000,
+    "category": "Ritual de Belleza",
+    "page": 16,
+    "description": "Bolsa afelpada para brindar calor y comodidad."
+  },
+  {
+    "id": "llavero-casco",
+    "name": "Llavero casco mini KMD",
+    "price": 10000,
+    "category": "Estilo & Encanto",
+    "page": 17,
+    "description": "Llavero decorativo con diseño de casco."
+  },
+  {
+    "id": "limas-unitarias",
+    "name": "Limas de uñas kawaii",
+    "price": 4000,
+    "category": "Ritual de Belleza",
+    "page": 18,
+    "description": "Limas decoradas, grano 100/180."
+  },
+  {
+    "id": "llaveros-stitch",
+    "name": "Llaveros tiernos 3D",
+    "price": 13000,
+    "category": "Estilo & Encanto",
+    "page": 19,
+    "description": "Llavero con correa y diseño 3D."
+  },
+  {
+    "id": "limas-pack",
+    "name": "Pack x 3 limas kawaii animalitos",
+    "price": 3000,
+    "category": "Ritual de Belleza",
+    "page": 20,
+    "description": "Pack de tres limas con diseños de animalitos."
+  },
+  {
+    "id": "libros-colorear",
+    "name": "Libros para colorear antiestrés",
+    "price": 10000,
+    "category": "Detalles que Enamoran",
+    "page": 21,
+    "description": "Estilos Line Art y libros para colorear."
+  },
+  {
+    "id": "squeeze",
+    "name": "Squeeze desestresantes",
+    "price": null,
+    "price_min": 2000,
+    "price_max": 12000,
+    "category": "Detalles que Enamoran",
+    "page": 22,
+    "description": "Figuras suaves, elásticas y antiestrés. Precio según modelo: desde $2.000 hasta $12.000."
+  },
+  {
+    "id": "mini-blocks",
+    "name": "Mini blocks Halloween armables",
+    "price": 8000,
+    "category": "Detalles que Enamoran",
+    "page": 23,
+    "description": "Tres modelos armables de colección."
+  },
+  {
+    "id": "balsamo",
+    "name": "Bálsamo labial frutal 7 g",
+    "price": 3000,
+    "category": "Ritual de Belleza",
+    "page": 24,
+    "description": "Hidrata los labios y aporta brillo natural. Sabores surtidos."
+  },
+  {
+    "id": "esponjitas",
+    "name": "Esponjitas kawaii con soporte",
+    "price": 4000,
+    "category": "Ritual de Belleza",
+    "page": 25,
+    "description": "Esponja para difuminar base, corrector y rubor."
+  },
+  {
+    "id": "kit-ruby",
+    "name": "Kit Beauty Ruby Face",
+    "price": 20000,
+    "category": "Ritual de Belleza",
+    "page": 26,
+    "description": "Incluye diadema spa y masajeador facial."
+  },
+  {
+    "id": "kit-spa",
+    "name": "Kit skincare spa",
+    "price": 22000,
+    "category": "Ritual de Belleza",
+    "page": 27,
+    "description": "Incluye balaca, muñequeras absorbentes, esponjita y pinza."
+  },
+  {
+    "id": "parches-acne",
+    "name": "Parches para acné en forma de estrellita",
+    "price": 5000,
+    "category": "Ritual de Belleza",
+    "page": 28,
+    "description": "Parches hidrocoloides; paquete de 6 packs / 120 parches, según el anuncio."
+  }
+]

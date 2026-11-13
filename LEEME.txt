@@ -1,0 +1,18 @@
+ANTOJO SECRETO - TIENDA WEB INICIAL
+
+Archivos:
+- index.html: tienda pública
+- admin.html: administración local de demostración
+- styles.css: estilos adaptables
+- store.js: catálogo, filtros y pedidos por WhatsApp
+- products.json: productos extraídos del PDF
+- assets/: imágenes renderizadas de las 29 páginas del catálogo
+
+IMPORTANTE:
+Esta entrega es un proyecto web inicial listo para probar y personalizar. Para servirlo correctamente, abre una terminal en esta carpeta y ejecuta:
+  python -m http.server 8000
+Luego visita http://localhost:8000
+
+La administración actual guarda datos en localStorage del navegador. NO es un panel privado seguro ni sincroniza cambios entre dispositivos. Para cumplir la versión final solicitada (URL pública + URL administrativa privada, datos sincronizados y autenticación real) hay que desplegar el sitio y conectar una base de datos/autenticación, por ejemplo Supabase. No publicar admin.html como un panel protegido hasta completar esa conexión.
+
+Los precios son los visibles en el PDF. Los productos sin precio legible o con rango se indican como pendientes/de rango. Las existencias no aparecen en el PDF y por eso quedan sin inventario asignado: deben ingresarse manualmente.
